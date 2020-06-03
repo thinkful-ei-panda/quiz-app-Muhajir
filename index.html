@@ -13,11 +13,118 @@
 
 <body>
   <header>
-    <h1>The name of your quiz</h1>
+    <h1>Movie Trivia</h1>
   </header>
-  <main></main>
+
+  <main>
+    <div class="beginQuiz">
+      <h2>Shall we play a game?</h2>
+
+      <img src="images/startimage.gif" alt="Shall we play a game? image">
+
+      <form>
+        <input type = "submit" value = yes id = "startBtn">
+      </form>
+    </div>
+
+    <div class="questionPg">
+      <h2>Question number:</h2>
+
+      <p>Question?</p>
+
+      <div class="answerChoices">
+        
+        <div class="choice1">
+          <input type="radio" value = "1">
+          <label for="1">1</label>
+        </div>
+        <div class="choice2">
+          <input type="radio">
+        </div>
+        <div class="choice3">
+          <input type="radio">
+        </div>
+        <div class="choice4">
+          <input type="radio">
+        </div>
+
+      </div>
+
+      <form>
+        <input type="submit" id = "submitAnswerBtn">
+      </form>
+
+    </div>
+
+
+    <div class="correctAnswerPg">
+      <h2>Correct!</h2>
+
+      <img src="" alt="">
+
+      <p>Score: </p>
+
+      <ul>
+      </ul>
+
+      <form>
+        <input type="Submit" value = "next question">
+      </form>
+
+    </div>
+
+    <div class="wrongAnswerPg">
+
+      <h2>wrong!</h2>
+
+      <img src="" alt="">
+
+      <section>
+        <p>right answer</p>
+      </section>
+
+
+      <p>Score: </p>
+
+      <ul></ul>
+
+      <form>
+        <input type="Submit" value = "next question">
+      </form>
+
+    </div>
+  
+    <div class="quizOverPg">
+      <h2>You Finished the Quiz!</h2>
+
+      <p>Score Total</p>
+      
+      <ul>
+      </ul>
+
+      <form>
+        <input type="Submit" value = "New Game">
+      </form>
+      
+
+    </div>
+    <!-- End of quiz page
+
+    Finished Quiz title
+
+    Score total
+    right / wrong
+    
+    new game button -->
+
+
+
+
+  </main>
+
   <script src="https://code.jquery.com/jquery-3.4.1.slim.js" crossorigin="anonymous"></script>
   <script src="app.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cuid/1.3.8/browser-cuid.min.js"></script>
 </body>
 
 </html>

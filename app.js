@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Example store structure
  */
@@ -52,7 +54,56 @@ const store = {
 /********** RENDER FUNCTION(S) **********/
 
 // This function conditionally replaces the contents of the <main> tag based on the state of the store
+function renderQuiz() {
+
+  console.log('`renderQuiz` ran.');
+}
+
+
+
+
 
 /********** EVENT HANDLER FUNCTIONS **********/
 
 // These functions handle events (submit, click, etc)
+
+//  This function will handle when the user clicks yes to start quiz
+function startQuiz() {
+
+  console.log('`startQuiz` ran.');
+}
+
+//  This function will handle when the user clicks no and doesn't want to start quiz
+function doNotStartQuiz() {
+
+  console.log('`doNotStartQuiz` ran.');
+}
+
+// This function will handle when a user submits an answer to a question
+function submitAnswer() {
+
+  console.log('`submitAnswer` ran.');
+}
+
+// This function will handle when a user clicks next question
+function nextQuestion() {
+
+  console.log('`nextQuestion` ran.');
+}
+
+// This function will handle when a user clicks finish Quiz on the final question
+function finishQuiz() {
+  
+  console.log('`finishQuiz` ran.');
+}
+
+// This function will handle when a user clicks new game
+function newQuiz() {
+
+  console.log('`newQuiz` ran.');
+}
+
+//  This function will be callback when page loads. Responsible for initial quiz rendering, and activating handler functions for quiz.
+function handleQuiz() {
+  
+}
