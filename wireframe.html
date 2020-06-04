@@ -8,12 +8,12 @@
   <title>Quiz App</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet"
     type="text/css" />
-  <link href="app.css" rel="stylesheet" type="text/css" />
+  <link href="app.css" rel="stylesheet" type="text/css"/>
 </head>
 
 <body>
   <header>
-    <h1>Movie Trivia</h1>
+    <h1>Movie Trivia Quiz</h1>
   </header>
 
   <main>
@@ -28,31 +28,37 @@
     </div>
 
     <div class="questionPg">
-      <h2>Question number:</h2>
+      <h2>Question 1:</h2>
 
-      <p>Question?</p>
+      <p>Which movie is this line from? “Leave the gun, take the cannoli"</p>
 
       <div class="answerChoices">
-        
-        <div class="choice1">
-          <input type="radio" value = "1">
-          <label for="1">1</label>
-        </div>
-        <div class="choice2">
-          <input type="radio">
-        </div>
-        <div class="choice3">
-          <input type="radio">
-        </div>
-        <div class="choice4">
-          <input type="radio">
-        </div>
+        <form >
+          <ol>
+            <li>
+              <input type="radio" id = choice1>
+              <label for="choice1">The Godfather</label>
+            </li>
+            <li>
+              <input type="radio" id = "choice2">
+              <label for="choice2">Goodfellas</label>
+            </li>
+            <li>
+              <input type="radio" id = "choice3">
+              <label for="choice3">Heat</label>
+            </li>
+            <li>
+              <input type="radio" id = "choice4">
+              <label for="choice4">The Irishman</label>
+            </li>
+          </ol>
+          
+          <input type="submit" id = "submitAnswerBtn">
+        </form>
 
       </div>
 
-      <form>
-        <input type="submit" id = "submitAnswerBtn">
-      </form>
+     
 
     </div>
 
@@ -60,11 +66,13 @@
     <div class="correctAnswerPg">
       <h2>Correct!</h2>
 
-      <img src="" alt="">
+      <img src="images/q1image.gif" alt="The Godfather, leave the gun take the cannoli">
 
       <p>Score: </p>
 
       <ul>
+        <li>Correct: 1</li>
+        <li>Incorrect: 0</li>
       </ul>
 
       <form>
@@ -73,20 +81,24 @@
 
     </div>
 
-    <div class="wrongAnswerPg">
+    <div class="inCorrectAnswerPg">
 
-      <h2>wrong!</h2>
+      <h2>Incorrect!</h2>
 
-      <img src="" alt="">
+      <img src="images/q1image.gif" alt="The Godfather, leave the gun take the cannoli">
 
       <section>
-        <p>right answer</p>
+        <p>The correct answer was:</p>
+        <p>Choice 1: "The Godfather"</p>
       </section>
 
 
       <p>Score: </p>
 
-      <ul></ul>
+      <ul>
+        <li>Correct: 0</li>
+        <li>Incorrect: 1</li>
+      </ul>
 
       <form>
         <input type="Submit" value = "next question">
@@ -97,9 +109,13 @@
     <div class="quizOverPg">
       <h2>You Finished the Quiz!</h2>
 
-      <p>Score Total</p>
+      <img src="/images/qfinal.gif" alt="Avengers Assemble">
+
+      <p>Score Total:</p>
       
       <ul>
+        <li>Correct: 3</li>
+        <li>Incorrect: 2</li>
       </ul>
 
       <form>
@@ -108,18 +124,6 @@
       
 
     </div>
-    <!-- End of quiz page
-
-    Finished Quiz title
-
-    Score total
-    right / wrong
-    
-    new game button -->
-
-
-
-
   </main>
 
   <script src="https://code.jquery.com/jquery-3.4.1.slim.js" crossorigin="anonymous"></script>

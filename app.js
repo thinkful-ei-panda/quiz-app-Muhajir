@@ -29,7 +29,8 @@ const store = {
   ],
   quizStarted: false,
   questionNumber: 0,
-  score: 0
+  scoreCorrect: 0,
+  scoreIncorrect: 0,
 };
 
 /**
@@ -50,6 +51,7 @@ const store = {
 /********** TEMPLATE GENERATION FUNCTIONS **********/
 
 // These functions return HTML templates
+//
 
 /********** RENDER FUNCTION(S) **********/
 
