@@ -120,7 +120,7 @@ function generateQuestion() {
     <form id = "answers">
       <ol>
         <li>
-          <input type="radio" name = "answerChoice" id = "choice1" value = "${ans1}">
+          <input type="radio" name = "answerChoice" id = "choice1" value = "${ans1}" required>
           <label for="choice1">${ans1}</label>
         </li>
         <li>
