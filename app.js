@@ -3,29 +3,59 @@
 /**
  * Example store structure
  */
-const store = {
+const STORE = {
   // 5 or more questions are required
   questions: [
     {
-      question: 'What color is broccoli?',
+      question: 'Which movie is this line from? “Leave the gun, take the cannoli"',
       answers: [
-        'red',
-        'orange',
-        'pink',
-        'green'
+        'The Godfather',
+        'Goodfellas',
+        'Heat',
+        'The Irishman'
       ],
-      correctAnswer: 'green'
+      correctAnswer: 'The Godfather'
     },
     {
-      question: 'What is the current year?',
+      question: 'Which movie is this line from? “These are not the droids you’re looking for."',
       answers: [
-        '1970',
-        '2015',
-        '2019',
-        '2005'
+        'Terminator',
+        'Avatar',
+        'Star Wars',
+        'Star Trek'
       ],
-      correctAnswer: '2019'
-    }
+      correctAnswer: 'Star Wars'
+    },
+    {
+      question: 'Which movie is this line from? ”I volunteer as tribute"',
+      answers: [
+        'Indiana Jones',
+        'Hunger Games',
+        'Planet of The Apes',
+        'After Earth'
+      ],
+      correctAnswer: 'Hunger Games',
+    },
+    {
+      question: 'Which movie is this line from? ”With great power, comes great responsibility"',
+      answers: [
+        'Avengers',
+        'Justice League',
+        'Spiderman',
+        'X-Men'
+      ],
+      correctAnswer: 'Spiderman',
+    },
+    {
+      question: 'Which movie is this line from? “King Kong ain’t got **** on me!"',
+      answers: [
+        'King Kong',
+        'Training Day',
+        'Queen Kong',
+        'Godzilla vs Kong'
+      ],
+      correctAnswer: 'Training Day',
+    },
   ],
   quizStarted: false,
   questionNumber: 0,
@@ -70,42 +100,51 @@ function renderQuiz() {
 // These functions handle events (submit, click, etc)
 
 //  This function will handle when the user clicks yes to start quiz
-function startQuiz() {
+function handleStartQuiz() {
 
-  console.log('`startQuiz` ran.');
+  console.log('`handleStartQuiz` ran.');
 }
 
 //  This function will handle when the user clicks no and doesn't want to start quiz
-function doNotStartQuiz() {
+function handleDoNotStartQuiz() {
 
-  console.log('`doNotStartQuiz` ran.');
+  console.log('`handleDoNotStartQuiz` ran.');
 }
 
 // This function will handle when a user submits an answer to a question
-function submitAnswer() {
+function handleSubmitAnswer() {
 
-  console.log('`submitAnswer` ran.');
+  console.log('`handleSubmitAnswer` ran.');
 }
 
 // This function will handle when a user clicks next question
-function nextQuestion() {
+function handleNextQuestion() {
 
-  console.log('`nextQuestion` ran.');
+  console.log('`handleNextQuestion` ran.');
 }
 
 // This function will handle when a user clicks finish Quiz on the final question
-function finishQuiz() {
+function handleFinishQuiz() {
   
-  console.log('`finishQuiz` ran.');
+  console.log('`handleFinishQuiz` ran.');
 }
 
 // This function will handle when a user clicks new game
-function newQuiz() {
+function handleNewQuiz() {
 
-  console.log('`newQuiz` ran.');
+  console.log('`handleNewQuiz` ran.');
 }
 
 //  This function will be callback when page loads. Responsible for initial quiz rendering, and activating handler functions for quiz.
 function handleQuiz() {
-  
+  renderQuiz();
+  handleStartQuiz();
+  handleDoNotStartQuiz();
+  handleSubmitAnswer();
+  handleNextQuestion();
+  handleFinishQuiz();
+  handleNewQuiz();
+
 }
+
+$(handleQuiz);
