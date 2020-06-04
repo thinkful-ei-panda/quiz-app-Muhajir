@@ -84,11 +84,36 @@ const STORE = {
 //
 
 /********** RENDER FUNCTION(S) **********/
+//These functions generate the html templates to be rendered for each page of the quiz
+
+function generateStartQuiz() {
+  const startQuizHtml = `<div class="beginQuiz">
+  <h2>Shall we play a game?</h2>
+
+  <img src="images/startimage.gif" alt="Shall we play a game? image">
+
+  <form action = "#questionPg">
+    <input type = "submit" value = yes id = "startBtn">
+  </form>
+</div>`;
+
+$('main').html(startQuizHtml);
+}
+
+
 
 // This function conditionally replaces the contents of the <main> tag based on the state of the store
 function renderQuiz() {
+  let html = ``;
 
+  if (STORE.quizStarted === false) {
+    $('main').html(generateStartQuiz);
+  }
+
+  
   console.log('`renderQuiz` ran.');
+
+  
 }
 
 
@@ -98,6 +123,8 @@ function renderQuiz() {
 /********** EVENT HANDLER FUNCTIONS **********/
 
 // These functions handle events (submit, click, etc)
+
+
 
 //  This function will handle when the user clicks yes to start quiz
 function handleStartQuiz() {
