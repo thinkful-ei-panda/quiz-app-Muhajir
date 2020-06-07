@@ -7,7 +7,7 @@ const STORE = {
   // 5 or more questions are required
   questions: [
     {
-      question: 'Which movie is this line from? “Leave the gun, take the cannoli"',
+      question: 'Which movie is this line from? "Leave the gun, take the cannoli"',
       answers: [
         'The Godfather',
         'Goodfellas',
@@ -18,7 +18,7 @@ const STORE = {
       image: '<img src="images/q1image.gif" alt="The Godfather, leave the gun take the cannoli"></img>;'
     },
     {
-      question: 'Which movie is this line from? “These are not the droids you’re looking for."',
+      question: 'Which movie is this line from? "These are not the droids you’re looking for."',
       answers: [
         'Terminator',
         'Avatar',
@@ -29,7 +29,7 @@ const STORE = {
       image: '<img src="images/q2image.gif" alt="Star Wars, these are not the droids you\'re looking for">'
     },
     {
-      question: 'Which movie is this line from? ”I volunteer as tribute"',
+      question: 'Which movie is this line from? "I volunteer as tribute"',
       answers: [
         'Indiana Jones',
         'Hunger Games',
@@ -40,7 +40,7 @@ const STORE = {
       image: '<img src="images/q3image.gif" alt="The Hunger Games, I volunteer as tribute.">'
     },
     {
-      question: 'Which movie is this line from? ”With great power, comes great responsibility"',
+      question: 'Which movie is this line from? "With great power, comes great responsibility"',
       answers: [
         'Avengers',
         'Justice League',
@@ -51,7 +51,7 @@ const STORE = {
       image: '<img src="images/q4image.gif" alt="Spiderman, with great power comes great responsibilty.">'
     },
     {
-      question: 'Which movie is this line from? “King Kong ain’t got **** on me!"',
+      question: 'Which movie is this line from? "King Kong ain’t got **** on me!"',
       answers: [
         'King Kong',
         'Training Day',
@@ -160,13 +160,10 @@ function generateCorrect() {
   ${image}
 
   <p>Score: </p>
+  <p>Correct: ${correct}</p>
+  <p>Incorrect: ${incorrect}</p>
 
-  <ul>
-    <li>Correct: ${correct}</li>
-    <li>Incorrect: ${incorrect}</li>
-  </ul>
-
-  <div class = ".btn">
+  <div class = "btn">
   <button type="button" id ="nextQuestionBtn">Next Question</button>
   </div>
 
@@ -190,8 +187,7 @@ function generateIncorrect() {
   ${image}
 
   <section>
-        <p>The correct answer was:</p>
-        <p>${correctAnswer}</p>
+        <p>The correct answer was: ${correctAnswer}</p>
   </section>
   <p>Score: </p>
 
