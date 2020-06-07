@@ -96,8 +96,8 @@ function generateStartQuiz() {
   `<div class="beginQuiz">
     <h2>Shall we play a game?</h2>
     <img src="images/startimage.gif" alt="Shall we play a game? image">
-    <div>
-      <button type="button" id ="startBtn">Yes</button>
+    <div class = "btn">
+      <button type="button" id ="startBtn" class = "block">Yes</button>
     </div>
   </div>`;
 
@@ -112,7 +112,7 @@ function generateQuestion() {
   let ans4 = STORE.questions[index].answers[3];
   let correct = STORE.questions[index].correctAnswer;
   const QuestionHtml = `<div class="questionPg">
-  <h2>Question ${STORE.questionNumber}:</h2>
+  <h2>Question ${STORE.questionNumber} of 5:</h2>
 
   <p>${STORE.questions[index].question}</p>
 
@@ -136,8 +136,9 @@ function generateQuestion() {
           <label for="choice4">${ans4}</label>
         </li>
       </ol>
-      
-      <input type="submit" id = "submitAnswerBtn">
+      <div class = "submitBtn block">
+        <input type="submit" id = "submitAnswerBtn">
+      </div>
     </form>
 
   </div>
@@ -165,7 +166,7 @@ function generateCorrect() {
     <li>Incorrect: ${incorrect}</li>
   </ul>
 
-  <div>
+  <div class = ".btn">
   <button type="button" id ="nextQuestionBtn">Next Question</button>
   </div>
 
@@ -199,7 +200,7 @@ function generateIncorrect() {
     <li>Incorrect: ${incorrect}</li>
   </ul>
 
-  <div>
+  <div class = "btn">
     <button type="button" id ="nextQuestionBtn">Next Question</button>
   </div>
 
@@ -225,7 +226,7 @@ function generateEndQuiz() {
     <li>Incorrect: ${incorrect}</li>
   </ul>
 
-  <div>
+  <div class = "btn">
       <button type="button" id ="endBtn">New Game</button>
   </div>
   
