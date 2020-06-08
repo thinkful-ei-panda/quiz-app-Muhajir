@@ -213,7 +213,7 @@ function generateEndQuiz() {
   <div class="quizOverPg">
   <h2>You Finished the Quiz!</h2>
 
-  <img src="/images/qfinal.gif" alt="Avengers Assemble">
+  <img src="images/qfinal.gif" alt="Avengers Assemble">
 
   <p>Score Total:</p>
   
@@ -244,10 +244,10 @@ function renderQuiz() {
   }
   else {
     $('main').html(generateEndQuiz);
-    console.log('this will generate the last page')
+    // console.log('this will generate the last page');
   }
 
-  console.log('`renderQuiz` ran.');
+  // console.log('`renderQuiz` ran.');
 
   
 }
@@ -274,18 +274,18 @@ function handleStartQuizBtn() {
     
     STORE.quizStarted = true;
     STORE.questionNumber = 1;
-    console.log('Start button ran')
-    console.log(`${STORE.quizStarted}`)
-    console.log(`${STORE.questionNumber}`)
+    // console.log('Start button ran')
+    // console.log(`${STORE.quizStarted}`)
+    // console.log(`${STORE.questionNumber}`)
     renderQuiz();
   });
-  console.log('`handleStartQuizBtn` ran.');
+  // console.log('`handleStartQuizBtn` ran.');
 }
 
 //  This function will handle when the user clicks no and doesn't want to start quiz
 function handleDoNotStartQuiz() {
 
-  console.log('`handleDoNotStartQuiz` ran.');
+  // console.log('`handleDoNotStartQuiz` ran.');
 }
 
 // This function will handle when a user submits an answer to a question
@@ -294,7 +294,7 @@ function handleSubmitAnswer() {
     event.preventDefault();
     let index = STORE.questionNumber -1;
     let input = $("input[type=radio]:checked").val();
-    console.log(input)
+    // console.log(input)
 
     if ($("input[type=radio]:checked").val() === STORE.questions[index].correctAnswer) {
       STORE.scoreCorrect ++;
@@ -306,14 +306,14 @@ function handleSubmitAnswer() {
     else {
       STORE.scoreIncorrect ++;
       generateIncorrect();
-      console.log(STORE.scoreIncorrect);
+      // console.log(STORE.scoreIncorrect);
     }
 
-    console.log('submit button ran')
-  })
+    // console.log('submit button ran')
+  });
 
 
-  console.log('`handleSubmitAnswer` ran.');
+  // console.log('`handleSubmitAnswer` ran.');
 }
 
 // This function will handle when a user clicks next question
@@ -328,16 +328,10 @@ function handleNextQuestion() {
       generateEndQuiz();
     }
     
-    console.log('NextQuestion works')
-  })
+    // console.log('NextQuestion works')
+  });
 
-  console.log('`handleNextQuestion` ran.');
-}
-
-// This function will handle when a user clicks finish Quiz on the final question
-function handleFinishQuiz() {
-  
-  console.log('`handleFinishQuiz` ran.');
+  // console.log('`handleNextQuestion` ran.');
 }
 
 // This function will handle when a user clicks new game
@@ -349,15 +343,15 @@ function handleNewQuiz() {
     STORE.scoreCorrect = 0;
     STORE.scoreIncorrect = 0;
 
-    console.log(STORE.quizStarted)
-    console.log(STORE.questionNumber)
-    console.log(STORE.scoreCorrect)
-    console.log(STORE.scoreIncorrect)
-    console.log('new game works')
+    // console.log(STORE.quizStarted)
+    // console.log(STORE.questionNumber)
+    // console.log(STORE.scoreCorrect)
+    // console.log(STORE.scoreIncorrect)
+    // console.log('new game works')
     renderQuiz();
-  })
+  });
 
-  console.log('`handleNewQuiz` ran.');
+  // console.log('`handleNewQuiz` ran.');
 }
 
 //  This function will be callback when page loads. Responsible for initial quiz rendering, and activating handler functions for quiz.
@@ -367,9 +361,7 @@ function handleQuiz() {
   handleDoNotStartQuiz();
   handleSubmitAnswer();
   handleNextQuestion();
-  handleFinishQuiz();
   handleNewQuiz();
-
 }
 
 $(handleQuiz);
